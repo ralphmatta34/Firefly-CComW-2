@@ -14,6 +14,10 @@
 		B3E786DB2C18493300CBA6AA /* Firefly_CComW_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E786DA2C18493300CBA6AA /* Firefly_CComW_2Tests.swift */; };
 		B3E786E52C18493300CBA6AA /* Firefly_CComW_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E786E42C18493300CBA6AA /* Firefly_CComW_2UITests.swift */; };
 		B3E786E72C18493300CBA6AA /* Firefly_CComW_2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E786E62C18493300CBA6AA /* Firefly_CComW_2UITestsLaunchTests.swift */; };
+		B3E786F42C1849D500CBA6AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3E786F32C1849D500CBA6AA /* GoogleService-Info.plist */; };
+		B3E786F72C184AE700CBA6AA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B3E786F62C184AE700CBA6AA /* FirebaseFirestore */; };
+		B3E786FA2C184D2500CBA6AA /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E786F92C184D2500CBA6AA /* Todo.swift */; };
+		B3E786FD2C184E9300CBA6AA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E786FC2C184E9300CBA6AA /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		B3E786E02C18493300CBA6AA /* Firefly-CComW-2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Firefly-CComW-2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E786E42C18493300CBA6AA /* Firefly_CComW_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firefly_CComW_2UITests.swift; sourceTree = "<group>"; };
 		B3E786E62C18493300CBA6AA /* Firefly_CComW_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firefly_CComW_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3E786F32C1849D500CBA6AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3E786F92C184D2500CBA6AA /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		B3E786FC2C184E9300CBA6AA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E786F72C184AE700CBA6AA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,9 @@
 		B3E786C82C18493000CBA6AA /* Firefly-CComW-2 */ = {
 			isa = PBXGroup;
 			children = (
+				B3E786FB2C184E7D00CBA6AA /* Managers */,
+				B3E786F82C184D0D00CBA6AA /* Models */,
+				B3E786F32C1849D500CBA6AA /* GoogleService-Info.plist */,
 				B3E786C92C18493000CBA6AA /* Firefly_CComW_2App.swift */,
 				B3E786CB2C18493000CBA6AA /* ContentView.swift */,
 				B3E786CD2C18493200CBA6AA /* Assets.xcassets */,
@@ -127,6 +138,22 @@
 			path = "Firefly-CComW-2UITests";
 			sourceTree = "<group>";
 		};
+		B3E786F82C184D0D00CBA6AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3E786F92C184D2500CBA6AA /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B3E786FB2C184E7D00CBA6AA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B3E786FC2C184E9300CBA6AA /* FirebaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +170,9 @@
 			dependencies = (
 			);
 			name = "Firefly-CComW-2";
+			packageProductDependencies = (
+				B3E786F62C184AE700CBA6AA /* FirebaseFirestore */,
+			);
 			productName = "Firefly-CComW-2";
 			productReference = B3E786C62C18493000CBA6AA /* Firefly-CComW-2.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = B3E786BD2C18493000CBA6AA;
+			packageReferences = (
+				B3E786F52C184AE700CBA6AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B3E786C72C18493000CBA6AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +266,7 @@
 			files = (
 				B3E786D12C18493200CBA6AA /* Preview Assets.xcassets in Resources */,
 				B3E786CE2C18493200CBA6AA /* Assets.xcassets in Resources */,
+				B3E786F42C1849D500CBA6AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E786FD2C184E9300CBA6AA /* FirebaseManager.swift in Sources */,
 				B3E786CC2C18493000CBA6AA /* ContentView.swift in Sources */,
+				B3E786FA2C184D2500CBA6AA /* Todo.swift in Sources */,
 				B3E786CA2C18493000CBA6AA /* Firefly_CComW_2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +618,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3E786F52C184AE700CBA6AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3E786F62C184AE700CBA6AA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3E786F52C184AE700CBA6AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3E786BE2C18493000CBA6AA /* Project object */;
 }
